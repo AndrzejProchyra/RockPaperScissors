@@ -6,7 +6,19 @@ Class {
 }
 
 { #category : 'as yet unclassified' }
-Rock >> playAgainst: aScissors [
+Rock >> playAgainst: aHand [
+
+	^ aHand playAgainstRock: self
+]
+
+{ #category : 'as yet unclassified' }
+Rock >> playAgainstPaper: aPaper [
+
+	^ aPaper
+]
+
+{ #category : 'as yet unclassified' }
+Rock >> playAgainstScissors: aScissors [
 
 	^ self
 ]
