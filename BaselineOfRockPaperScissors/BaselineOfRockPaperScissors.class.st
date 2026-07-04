@@ -10,7 +10,11 @@ BaselineOfRockPaperScissors >> baseline: spec [
 	"#common means for all implementations of Pharo"
 
 	<baseline>
-	spec for: #common do: [ "the baselines of external dependencies"
+	spec for: #common do: [
+			spec preLoadDoIt: [ Transcript open ].
+			spec postLoadDoIt: [ 'I am loaded' traceCr ].
+
+			"the baselines of external dependencies"
 			spec
 				baseline: 'MathRandomNumbers'
 				with: [
