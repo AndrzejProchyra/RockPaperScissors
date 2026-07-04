@@ -45,5 +45,5 @@ BaselineOfRockPaperScissors >> postload [
 { #category : 'as yet unclassified' }
 BaselineOfRockPaperScissors >> preload [
 
-	^ [ Transcript open ]
+	^ Transcript open
 ]
