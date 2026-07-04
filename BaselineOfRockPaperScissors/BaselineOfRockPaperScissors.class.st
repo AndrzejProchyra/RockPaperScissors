@@ -11,8 +11,8 @@ BaselineOfRockPaperScissors >> baseline: spec [
 
 	<baseline>
 	spec for: #common do: [
-			spec preLoadDoIt: [ Transcript open ].
-			spec postLoadDoIt: [ 'I am loaded' traceCr ].
+			spec preLoadDoIt: #preload.
+			spec postLoadDoIt: #postload.
 
 			"the baselines of external dependencies"
 			spec
@@ -34,4 +34,16 @@ BaselineOfRockPaperScissors >> baseline: spec [
 			spec group: 'Tests' with: #( 'RockPaperScissors-Tests' ).
 
 			spec group: 'default' with: #( 'Tests' ) ]
+]
+
+{ #category : 'installing' }
+BaselineOfRockPaperScissors >> postload [
+
+	'I am loaded' traceCr
+]
+
+{ #category : 'as yet unclassified' }
+BaselineOfRockPaperScissors >> preload [
+
+	^ [ Transcript open ]
 ]
